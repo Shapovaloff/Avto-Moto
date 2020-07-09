@@ -14,3 +14,14 @@
     margin-left: 0;
   }
 }
+
+.site-list__link {
+  font-weight: 600;
+  text-decoration: none;
+  color: #48494d;
+
+  &:hover,
+  &:focus {
+    color: #000000;
+  }
+}

@@ -18,8 +18,17 @@
   font: inherit;
   font-size: 20px;
   line-height: 27px;
+  cursor: pointer;
 
   &--active {
+    background-color: $accent-color;
+    color: #ffffff;
+    border: none;
+    cursor: default;
+  }
+
+  &:hover,
+  &:focus {
     background-color: $accent-color;
     color: #ffffff;
     border: none;

@@ -15,4 +15,9 @@
   line-height: 22px;
   color: #48494d;
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: #000000;
+  }
 }

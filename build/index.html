@@ -40,7 +40,8 @@
           <ul class="slider__list">
             <li class="slider__item slider__item--active">
               <picture>
-                <img class="slider__img" width="600" height="375" src="img/slider-1@1x.jpg" alt="Фото машины вид с переди">
+                <source type="image/webp" srcset="img/slider-1@1x.webp 1x, img/slider-1@2x.webp 2x">
+                <img class="slider__img" width="600" height="375" src="img/slider-1@1x.jpg" srcset="img/slider-1@2x.jpg 2x" alt="Фото машины вид с переди">
               </picture>
             </li>
             <li class="slider__item">
@@ -58,7 +59,7 @@
         </div>
 
         <div class="gallery__preview preview">
-          <button class="preview__btn preview__btn--prew" type="button" aria-label="Кнопка назада" disabled=""></button>
+          <button class="preview__btn preview__btn--prew" type="button" aria-label="Предыдущий слайд" disabled=""></button>
           <ul class="preview__list">
             <li class="preview__item">
               <picture>
@@ -76,7 +77,7 @@
               </picture>
             </li>
           </ul>
-          <button class="preview__btn preview__btn--next" type="button" aria-label="Кнопка вперёд"></button>
+          <button class="preview__btn preview__btn--next" type="button" aria-label="Следующий слайд"></button>
         </div>
       </section>
 
@@ -121,12 +122,12 @@
       <h3 class="visually-hidden">Описание карточки автомобиля</h3>
       <div class="container">
         <div class="card-description__controls">
-          <button type="button" class="card-description__btn">Характеристики</button>
-          <button type="button" class="card-description__btn card-description__btn--active">Отзывы</button>
+          <button type="button" class="card-description__btn card-description__btn--active">Характеристики</button>
+          <button type="button" class="card-description__btn ">Отзывы</button>
           <button type="button" class="card-description__btn">Контакты</button>
         </div>
 
-        <section class="specifications tabs">
+        <section class="specifications tabs tabs--active">
           <h3 class="visually-hidden">Характеристики автомобиля</h3>
           <table class="specifications__list">
             <tr class="specifications__item">
@@ -248,7 +249,7 @@
           </ul>
         </section>
 
-        <section class="contacts tabs tabs--active">
+        <section class="contacts tabs">
           <h3 class="visually-hidden">Контакты</h3>
           <div class="contacts__wrapper">
             <ul class="contacts__addres">
@@ -311,6 +312,55 @@
         </ul>
       </div>
     </footer>
+
+    <section class="popup">
+      <div class="popup__container">
+        <button class="popup__close" type="button" aria-label="Кнопка закрытия модально окна"></button>
+        <h3 class="popup__title">Оставить отзыв</h3>
+        <form action="https://echo.htmlacademy.ru" method="POST">
+          <div class="popup__wrapper">
+            <div class="popup__column">
+              <p class="popop__item">
+                <svg class="popop__required" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3.519 5.778L3.434 3.908L4.998 4.911L5.542 3.993L3.893 3.143L5.542 2.293L4.998 1.358L3.434 2.361L3.519 0.490999H2.448L2.533 2.361L0.952 1.358L0.425 2.293L2.074 3.143L0.425 3.993L0.952 4.911L2.533 3.908L2.448 5.778H3.519Z" fill="#D12136"></path>
+                </svg>
+                <label class="visually-hidden" for="popop__name">Имя</label>
+                <input class="popop__field popop__field--name" name="name" id="popop__name" type="text" placeholder="Имя" required="">
+              </p>
+              <p class="popop__item">
+                <label class="visually-hidden" for="popop__advantages">Достоинства</label>
+                <input class="popop__field popop__field--advantages" name="advantages" id="popop__advantages" type="text" placeholder="Достоинства">
+              </p>
+              <p class="popop__item">
+                <label class="visually-hidden" for="popop__disadvantages">Недостатки</label>
+                <input class="popop__field popop__field--disadvantages" name="disadvantages" id="popop__disadvantages" type="text" placeholder="Недостатки" required="">
+              </p>
+            </div>
+
+            <div class="popup__column">
+              <div class="popup__assessment">
+                <p class="popup__assessment-text">Оцените товар:</p>
+                <div class="popup__assessment-star">
+                  <img width="27" height="26" class="popup__star" src="img/popup_star.svg" alt="Звезда">
+                  <img width="27" height="26" class="popup__star" src="img/popup_star.svg" alt="Звезда">
+                  <img width="27" height="26" class="popup__star" src="img/popup_star.svg" alt="Звезда">
+                  <img width="27" height="26" class="popup__star" src="img/popup_star.svg" alt="Звезда">
+                  <img width="27" height="26" class="popup__star" src="img/popup_star.svg" alt="Звезда">
+                </div>
+              </div>
+              <p class="popup__coments">
+                <svg class="popop__required" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3.519 5.778L3.434 3.908L4.998 4.911L5.542 3.993L3.893 3.143L5.542 2.293L4.998 1.358L3.434 2.361L3.519 0.490999H2.448L2.533 2.361L0.952 1.358L0.425 2.293L2.074 3.143L0.425 3.993L0.952 4.911L2.533 3.908L2.448 5.778H3.519Z" fill="#D12136"></path>
+                </svg>
+                <label class="visually-hidden" for="popup__coments-text">Комментарий</label>
+                <textarea class="popop__field popop__field--text" name="coments" id="popup__coments" cols="30" rows="10" placeholder="Комментарий" required=""></textarea>
+              </p>
+            </div>
+          </div>
+          <button class="button popup__btn" type="submit">Оставить отзыв</button>
+        </form>
+      </div>
+    </section>
 
   </main>
 </body>
