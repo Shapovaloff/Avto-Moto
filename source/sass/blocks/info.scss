@@ -80,14 +80,5 @@
 
   &--white {
     margin-top: 16px;
-    border: 1px solid $accent-color;
-    background-color: #ffffff;
-    color: $accent-color;
-  }
-
-  &--white:hover,
-  &--white:focus {
-    background-color: $accent-color;
-    color: #ffffff;
   }
 }

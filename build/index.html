@@ -113,7 +113,7 @@
           <p class="info__price-old">2  400 000 ₽</p>
         </div>
         <button type="button" class="button info__btn">оставить заявку</button>
-        <button type="button" class="button info__btn info__btn--white">В кредит от 11 000 ₽</button>
+        <button type="button" class="button button--white info__btn info__btn--white">В кредит от 11 000 ₽</button>
       </section>
     </div>
 
@@ -121,12 +121,12 @@
       <h3 class="visually-hidden">Описание карточки автомобиля</h3>
       <div class="container">
         <div class="card-description__controls">
-          <button type="button" class="card-description__btn card-description__btn--active">Характеристики</button>
-          <button type="button" class="card-description__btn">Отзывы</button>
+          <button type="button" class="card-description__btn">Характеристики</button>
+          <button type="button" class="card-description__btn card-description__btn--active">Отзывы</button>
           <button type="button" class="card-description__btn">Контакты</button>
         </div>
 
-        <section class="specifications">
+        <section class="specifications tabs">
           <h3 class="visually-hidden">Характеристики автомобиля</h3>
           <table class="specifications__list">
             <tr class="specifications__item">
@@ -159,8 +159,97 @@
             </tr>
           </table>
         </section>
+
+        <section class="reviews tabs tabs--active">
+          <h3 class="visually-hidden">Отзывы об автомобиле</h3>
+          <button type="button" class="button button--white reviews__btn-feedback">оставить отзыв</button>
+          <ul class="reviews__description">
+
+            <li class="reviews__description-item">
+              <h3 class="reviews__name">Борис Иванов</h3>
+              <ul class="reviews__list">
+                <li class="reviews__item">
+                  <svg class="reviews__plus" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.61816 4.36377H0.703125V3.06006H3.61816V0.0717773H4.93652V3.06006H7.85889V4.36377H4.93652V7.3374H3.61816V4.36377Z" fill="#D12136"></path>
+                  </svg>
+                  <span class="reviews__title reviews__title--advantages">Достоинства</span>
+                  <p class="reviews__text">мощность, внешний вид</p>
+                </li>
+
+                <li class="reviews__item">
+                  <svg class="reviews__minus" width="7" height="2" viewBox="0 0 7 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.600586 1.66748V0.275879H6.89941V1.66748H0.600586Z" fill="#D12136"></path>
+                  </svg>
+                  <span class="reviews__title reviews__title--disadvantages">Недостатки</span>
+                  <p class="reviews__text">Слабые тормозные колодки (пришлось заменить)</p>
+                </li>
+
+                <li class="reviews__item reviews__item--comment">
+                  <b class="reviews__title reviews__title--comment">Комментарий</b>
+                  <p class="reviews__text">Взяли по трейд-ин, на выгодных условиях у дилера. Стильная внешка и крут по базовым характеристикам. Не думал, что пересяду на китайский автопром, но сейчас гоняю и понимаю, что полностью доволен.</p>
+                </li>
+              </ul>
+
+              <div class="reviews__block-rating">
+                <div class="reviews__block-stars">
+                  <img class="reviews__star" src="img/star-red.svg" alt="Звезда">
+                  <img class="reviews__star" src="img/star-red.svg" alt="Звезда">
+                  <img class="reviews__star" src="img/star-red.svg" alt="Звезда">
+                  <img class="reviews__star" src="img/star-red-grey.svg" alt="Звезда">
+                  <img class="reviews__star" src="img/star-grey.svg" alt="Звезда">
+                </div>
+                <p class="reviews__text-advises">Советует</p>
+              </div>
+
+              <span class="reviews__text-answer">1 минуту назад</span>
+              <button type="button" class="reviews__btn-answer">Ответить</button>
+            </li>
+
+            <li class="reviews__description-item">
+              <h3 class="reviews__name">Марсель Исмагилов</h3>
+              <ul class="reviews__list">
+                <li class="reviews__item">
+                  <svg class="reviews__plus" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.61816 4.36377H0.703125V3.06006H3.61816V0.0717773H4.93652V3.06006H7.85889V4.36377H4.93652V7.3374H3.61816V4.36377Z" fill="#D12136"></path>
+                  </svg>
+                  <span class="reviews__title reviews__title--advantages">Достоинства</span>
+                  <p class="reviews__text">Cтиль, комфорт, управляемость</p>
+                </li>
+
+                <li class="reviews__item">
+                  <svg class="reviews__minus" width="7" height="2" viewBox="0 0 7 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.600586 1.66748V0.275879H6.89941V1.66748H0.600586Z" fill="#D12136"></path>
+                  </svg>
+                  <span class="reviews__title reviews__title--disadvantages">Недостатки</span>
+                  <p class="reviews__text">Дорогой ремонт и обслуживание</p>
+                </li>
+
+                <li class="reviews__item reviews__item--comment">
+                  <b class="reviews__title reviews__title--comment">Комментарий</b>
+                  <p class="reviews__text">Дизайн отличный, управление просто шикарно, ощущения за рулём такой машины особые. Но ремонт очень дорогой. Пару месяцев назад пришлось менять двигатель. По стоимости вышло как новый автомобиль. Так что, если покупать эту машину, надо быть готовым к большим расходам на обслуживание.</p>
+                </li>
+              </ul>
+
+              <div class="reviews__block-rating">
+                <div class="reviews__block-stars">
+                  <img class="reviews__star" src="img/star-red.svg" alt="Звезда">
+                  <img class="reviews__star" src="img/star-red.svg" alt="Звезда">
+                  <img class="reviews__star" src="img/star-red.svg" alt="Звезда">
+                  <img class="reviews__star" src="img/star-red-grey.svg" alt="Звезда">
+                  <img class="reviews__star" src="img/star-grey.svg" alt="Звезда">
+                </div>
+                <p class="reviews__text-advises">Советует</p>
+              </div>
+
+              <span class="reviews__text-answer">1 минуту назад</span>
+              <button type="button" class="reviews__btn-answer">Ответить</button>
+            </li>
+
+          </ul>
+        </section>
       </div>
     </section>
+
 
     <footer class="page-footer">
       <div class="container">
