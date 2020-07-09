@@ -8,10 +8,16 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
+  <div style="display: none">
+    <include src="build/img/sprite_auto.svg"></include>
+  </div>
+
   <header class="page-header">
     <div class="page-header__wrapper container">
       <a class="page-header__logo-link">
-        <img class="page-header__logo-img" src="img/logo.svg" width="133" height="55" alt="Логотип Avto-Moto">
+        <svg class="page-header__logo-img" width="133" height="55" aria-label="Логотип Avto-Moto">
+          <use xlink:href="#icon-logo"></use>
+        </svg>
       </a>
       <ul class="page-header__site-list site-list">
         <li class="site-list__item">
@@ -46,12 +52,14 @@
             </li>
             <li class="slider__item">
               <picture>
-                <img class="slider__img" width="600" height="375" src="img/slider-2@1x.jpg" alt="Фото машины вид с переди">
+                <source type="image/webp" srcset="img/slider-2@1x.webp 1x, img/slider-2@2x.webp 2x">
+                <img class="slider__img" width="600" height="375" src="img/slider-2@1x.jpg" srcset="img/slider-2@2x.jpg 2x" alt="Фото машины вид с переди">
               </picture>
             </li>
             <li class="slider__item">
               <picture>
-                <img class="slider__img" width="600" height="375" src="img/slider-3@1x.jpg" alt="Фото машины вид с переди">
+                <source type="image/webp" srcset="img/slider-3@1x.webp 1x, img/slider-3@2x.webp 2x">
+                <img class="slider__img" width="600" height="375" src="img/slider-3@1x.jpg" srcset="img/slider-3@2x.jpg 2x" alt="Фото машины вид с переди">
               </picture>
             </li>
           </ul>
@@ -63,17 +71,20 @@
           <ul class="preview__list">
             <li class="preview__item">
               <picture>
-                <img class="preview__img" width="128" height="80" src="img/slider-1@1x.jpg" alt="Фото машины вид с переди">
+                <source type="image/webp" srcset="img/slider-1@1x.webp 1x, img/slider-1@2x.webp 2x">
+                <img class="preview__img" width="128" height="80" src="img/slider-1@1x.jpg" srcset="img/slider-1@2x.jpg 2x" alt="Фото машины вид с переди">
               </picture>
             </li>
             <li class="preview__item">
               <picture>
-                <img class="preview__img" width="128" height="80" src="img/slider-2@1x.jpg" alt="Фото машины вид с переди">
+                <source type="image/webp" srcset="img/slider-2@1x.webp 1x, img/slider-2@2x.webp 2x">
+                <img class="preview__img" width="128" height="80" src="img/slider-2@1x.jpg" srcset="img/slider-2@2x.jpg 2x" alt="Фото машины вид с переди">
               </picture>
             </li>
             <li class="preview__item">
               <picture>
-                <img class="preview__img" width="128" height="80" src="img/slider-3@1x.jpg" alt="Фото машины вид с переди">
+                <source type="image/webp" srcset="img/slider-3@1x.webp 1x, img/slider-3@2x.webp 2x">
+                <img class="preview__img" width="128" height="80" src="img/slider-3@1x.jpg" srcset="img/slider-3@2x.jpg 2x" alt="Фото машины вид с переди">
               </picture>
             </li>
           </ul>
@@ -92,26 +103,26 @@
           </li>
           <li class="info__item">
             <svg class="info__icon" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g opacity=".5" stroke="#48494D" stroke-width="1.5"><path d="M11.194 20h17.612"/><path d="M11.194 20h17.612" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 14.53v10.94"/><path d="M20 14.53v10.94" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M28.806 14.53V20"/><path d="M28.806 14.53V20" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.194 14.53V25.47"/><path d="M11.194 14.53V25.47M11.194 14.53a2.686 2.686 0 100-5.373 2.686 2.686 0 000 5.373zM20 14.53a2.686 2.686 0 100-5.373 2.686 2.686 0 000 5.373zM28.806 14.53a2.686 2.686 0 100-5.373 2.686 2.686 0 000 5.373zM11.194 30.843a2.686 2.686 0 100-5.372 2.686 2.686 0 000 5.372zM20 30.843a2.686 2.686 0 100-5.372 2.686 2.686 0 000 5.372z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></g>
+              <g opacity=".5" stroke="#48494D" stroke-width="1.5"><path d="M11.194 20h17.612"/><path d="M11.194 20h17.612" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 14.53v10.94"/><path d="M20 14.53v10.94" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M28.806 14.53V20"/><path d="M28.806 14.53V20" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.194 14.53v10.94"/><path d="M11.194 14.53v10.94m0-10.94a2.686 2.686 0 100-5.373 2.686 2.686 0 000 5.373zm8.806 0a2.686 2.686 0 100-5.373 2.686 2.686 0 000 5.373zm8.806 0a2.686 2.686 0 100-5.373 2.686 2.686 0 000 5.373zM11.194 30.843a2.686 2.686 0 100-5.373 2.686 2.686 0 000 5.373zm8.806 0a2.686 2.686 0 100-5.373 2.686 2.686 0 000 5.373z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></g>
             </svg>
             <p class="info__descr info__descr--transmission">механика</p>
           </li>
           <li class="info__item">
-            <svg class="info__icon" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M28.762 10.48c.675 0 1.363.05 2.027.098.646.046 1.313.094 1.949.094.236 0 .453-.006.663-.02h.01a.192.192 0 01.16.3c-.415.609-.372 2-.327 3.473.061 1.967.124 4-.815 4.972-.353.365-.827.55-1.408.55-.56 0-.894-.902-1.28-1.947-.349-.94-.781-2.11-1.292-2.11-1.72 0-2.335 3.03-.92 5.532l3.084 5.28a1.16 1.16 0 01-.412 1.583 1.148 1.148 0 01-1.463-.25l-4.543-4.867c-1.62-.329-3.148-.496-4.545-.496-1.574 0-3.324.21-5.204.625l-4.436 4.738a1.15 1.15 0 01-1.62.138 1.155 1.155 0 01-.254-1.471l2.91-4.984c.215-2.797-.036-3.707-.284-3.976-.075-.08-.142-.09-.186-.09a.9.9 0 00-.668.295c-.7.719-.852 2.596-.831 3.611a.192.192 0 01-.19.221h-.014c-.195-.014-.381-.021-.562-.029-.768-.032-1.375-.057-1.7-.47-.223-.287-.27-.712-.144-1.34l.02-.12c.072-.456.222-1.405.743-2.248.655-1.058 1.666-1.596 3.003-1.596.108 0 .217.003.329.01.436.027.79.219 1.101.387.293.159.57.31.877.31.144 0 .29-.033.443-.099 1.069-.454 2.279-.674 3.7-.674.581 0 1.207.036 1.913.111.207.022.408.034.596.034 1.81 0 2.54-1.027 3.388-2.216.652-.915 1.39-1.952 2.727-2.642.948-.49 2.045-.718 3.455-.718v.001zm0-1.48c-1.653 0-2.965.28-4.13.88-1.655.856-2.54 2.1-3.251 3.098-.846 1.186-1.189 1.596-2.188 1.597a4.2 4.2 0 01-.441-.025c-.76-.081-1.436-.12-2.07-.12-1.564 0-2.92.24-4.14.736l-.177-.094c-.381-.206-.953-.515-1.711-.563a6.688 6.688 0 00-.42-.013c-1.856 0-3.328.794-4.257 2.296-.676 1.095-.866 2.286-.946 2.795l-.01.06-.005.03c-.083.42-.294 1.582.437 2.516.744.95 1.883.997 2.798 1.035l.2.008-1.587 2.717a2.634 2.634 0 002.266 3.97c.759 0 1.476-.327 1.975-.898l4.1-4.378c1.607-.33 3.1-.496 4.446-.496 1.167 0 2.442.127 3.795.378l4.196 4.495a2.62 2.62 0 003.305.536 2.644 2.644 0 00.938-3.607l-3.079-5.27c-.533-.947-.634-1.863-.57-2.499l.123.33c.504 1.365 1.076 2.912 2.662 2.912.981 0 1.834-.346 2.466-1 1.373-1.421 1.3-3.772 1.23-6.046-.025-.84-.069-2.235.09-2.62a1.686 1.686 0 00.056-1.738 1.666 1.666 0 00-1.554-.847 9.227 9.227 0 01-.571.017c-.578 0-1.212-.045-1.826-.09C30.241 9.054 29.498 9 28.763 9" fill="#48494D" opacity=".5"/>
+            <svg class="info__icon" width="40" height="40">
+              <use xlink:href="#icon-power"></use>
             </svg>
             <p class="info__descr">100 л.с.</p>
           </li>
           <li class="info__item">
-            <svg class="info__icon" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g opacity=".5" fill="#48494D"><path d="M34.087 17.312a.669.669 0 01-.475-.197l-6.801-6.8a.671.671 0 01.949-.95l6.8 6.801a.67.67 0 01-.473 1.146M32.474 18.925a.669.669 0 01-.474-.197l-6.801-6.8a.67.67 0 11.949-.95l6.8 6.801a.67.67 0 01-.474 1.146M30.929 20.47a.668.668 0 01-.475-.197l-6.8-6.8a.67.67 0 01.948-.949l6.801 6.8a.67.67 0 01-.474 1.146"/><path d="M22.547 18.256a.67.67 0 01-.474-1.145l2.877-2.878a.67.67 0 01.948.949L23.02 18.06a.668.668 0 01-.473.196M26.341 22.051a.67.67 0 01-.474-1.145l2.878-2.878a.671.671 0 01.949.95l-2.878 2.877a.667.667 0 01-.475.196M32.168 13.635a1.326 1.326 0 11-1.875-1.875 1.326 1.326 0 011.875 1.875zM5.913 17.304a.67.67 0 01-.474-1.145l6.8-6.8a.67.67 0 01.949.948l-6.801 6.8a.67.67 0 01-.474.197M7.526 18.917a.67.67 0 01-.474-1.145l6.8-6.8a.671.671 0 01.949.948l-6.8 6.8a.669.669 0 01-.475.197M9.071 20.463a.67.67 0 01-.474-1.146l6.8-6.8a.67.67 0 01.95.948l-6.801 6.801a.671.671 0 01-.475.197"/><path d="M13.658 22.044a.67.67 0 01-.474-.197l-2.878-2.877a.67.67 0 11.949-.949l2.877 2.878a.67.67 0 01-.474 1.145M17.453 18.249a.669.669 0 01-.474-.197l-2.878-2.878a.67.67 0 11.95-.948l2.877 2.877a.67.67 0 01-.475 1.146M9.708 11.751a1.326 1.326 0 11-1.876 1.876 1.326 1.326 0 011.876-1.876z"/><path d="M20.004 31.418c-1.92 0-3.84-.73-5.302-2.193-2.923-2.923-2.923-7.68 0-10.604 2.924-2.924 7.68-2.924 10.604 0 2.924 2.924 2.924 7.68 0 10.604a7.475 7.475 0 01-5.302 2.193zm0-13.648c-1.577 0-3.153.6-4.353 1.8a6.163 6.163 0 000 8.707c2.4 2.4 6.306 2.4 8.706 0 2.4-2.4 2.4-6.306 0-8.707a6.138 6.138 0 00-4.353-1.8zm4.827 10.981h.002-.002z"/><path d="M12.09 26.542h-1.27c-.926 0-1.68-.753-1.68-1.68v-1.894c0-.927.754-1.68 1.68-1.68h1.27c.927 0 1.68.753 1.68 1.68v1.895c0 .926-.754 1.68-1.68 1.68zm-1.27-3.912a.342.342 0 00-.337.338v1.895c0 .183.154.337.337.337h1.27a.342.342 0 00.338-.337v-1.895a.342.342 0 00-.338-.338h-1.27z"/></g>
+            <svg class="info__icon" width="40" height="40">
+              <use xlink:href="#icon-valume"></use>
             </svg>
             <p class="info__descr">1.4 л</p>
           </li>
         </ul>
         <div class="info__price-block">
           <b class="info__price-new">2 300 000 ₽</b>
-          <p class="info__price-old">2  400 000 ₽</p>
+          <p class="info__price-old">2 400 000 ₽</p>
         </div>
         <button type="button" class="button info__btn">оставить заявку</button>
         <button type="button" class="button button--white info__btn info__btn--white">В кредит от 11 000 ₽</button>
@@ -127,7 +138,7 @@
           <button type="button" class="card-description__btn">Контакты</button>
         </div>
 
-        <section class="specifications tabs tabs--active">
+        <section class="specifications tabs ">
           <h3 class="visually-hidden">Характеристики автомобиля</h3>
           <table class="specifications__list">
             <tr class="specifications__item">
@@ -193,6 +204,7 @@
 
               <div class="reviews__block-rating">
                 <div class="reviews__block-stars">
+                  /* Реализую когда буду писать JS*/
                   <img class="reviews__star" src="img/star-red.svg" alt="Звезда">
                   <img class="reviews__star" src="img/star-red.svg" alt="Звезда">
                   <img class="reviews__star" src="img/star-red.svg" alt="Звезда">
@@ -245,40 +257,42 @@
               <span class="reviews__text-answer">1 минуту назад</span>
               <button type="button" class="reviews__btn-answer">Ответить</button>
             </li>
-
           </ul>
         </section>
 
-        <section class="contacts tabs">
-          <h3 class="visually-hidden">Контакты</h3>
-          <div class="contacts__wrapper">
-            <ul class="contacts__addres">
-              <li class="contacts__addres-item">
-                <b class="contacts__title">Адрес</b>
-                <p class="contacts__descr">Санкт-Петербург,<br> набережная реки Карповки, дом 5</p>
-              </li>
-              <li class="contacts__addres-item">
-                <b class="contacts__title">Режим работы</b>
-                <p class="contacts__descr">Ежедневно, с 10:00 до 21:00</p>
-              </li>
-            </ul>
+        <section class="contacts tabs tabs--active">
+          <div class="contacts__container">
+            <h3 class="visually-hidden">Контакты</h3>
+            <div class="contacts__wrapper">
+              <ul class="contacts__addres">
+                <li class="contacts__addres-item">
+                  <b class="contacts__title">Адрес</b>
+                  <p class="contacts__descr">Санкт-Петербург,<br> набережная реки Карповки, дом 5</p>
+                </li>
+                <li class="contacts__addres-item">
+                  <b class="contacts__title">Режим работы</b>
+                  <p class="contacts__descr">Ежедневно, с 10:00 до 21:00</p>
+                </li>
+              </ul>
 
-            <ul class="contacts__data">
-              <li class="contacts__data-item">
-                <b class="contacts__title">Телефон</b>
-                <a href="tel:+78003335599" class="contacts__descr">8 (800) 333-55-99</a>
-              </li>
-              <li class="contacts__data-item">
-                <b class="contacts__title">E-mail</b>
-                <a href="mailto:info@avto-moto.ru" class="contacts__descr">info@avto-moto.ru</a>
-              </li>
-            </ul>
-          </div>
+              <ul class="contacts__data">
+                <li class="contacts__data-item">
+                  <b class="contacts__title">Телефон</b>
+                  <a href="tel:+78003335599" class="contacts__descr">8 (800) 333-55-99</a>
+                </li>
+                <li class="contacts__data-item">
+                  <b class="contacts__title">E-mail</b>
+                  <a href="mailto:info@avto-moto.ru" class="contacts__descr">info@avto-moto.ru</a>
+                </li>
+              </ul>
+            </div>
 
-          <div class="contacts__map">
-            <picture>
-              <img class="contacts__img" src="img/map@1x.jpg" width="431" height="271" alt="Наш адрес Санкт-Петербург, набережная реки Карповки, дом 5">
-            </picture>
+            <div class="contacts__map">
+              <picture>
+                <source type="image/webp" srcset="img/map@1x.webp 1x, img/map@2x.webp 2x">
+                <img class="contacts__img" src="img/map@1x.jpg" srcset="img/map@2x.jpg 2x" width="431" height="271" alt="Наш адрес Санкт-Петербург, набережная реки Карповки, дом 5">
+              </picture>
+            </div>
           </div>
         </section>
       </div>
@@ -341,6 +355,7 @@
               <div class="popup__assessment">
                 <p class="popup__assessment-text">Оцените товар:</p>
                 <div class="popup__assessment-star">
+                  /* Реализую когда буду писать JS*/
                   <img width="27" height="26" class="popup__star" src="img/popup_star.svg" alt="Звезда">
                   <img width="27" height="26" class="popup__star" src="img/popup_star.svg" alt="Звезда">
                   <img width="27" height="26" class="popup__star" src="img/popup_star.svg" alt="Звезда">
@@ -349,8 +364,8 @@
                 </div>
               </div>
               <p class="popup__coments">
-                <svg class="popop__required" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3.519 5.778L3.434 3.908L4.998 4.911L5.542 3.993L3.893 3.143L5.542 2.293L4.998 1.358L3.434 2.361L3.519 0.490999H2.448L2.533 2.361L0.952 1.358L0.425 2.293L2.074 3.143L0.425 3.993L0.952 4.911L2.533 3.908L2.448 5.778H3.519Z" fill="#D12136"/>
+                <svg class="popop__required" width="6" height="6">
+                  <use xlink:href="#icon-star-required"></use>
                 </svg>
                 <label class="visually-hidden" for="popup__coments-text">Комментарий</label>
                 <textarea class="popop__field popop__field--text" name="coments" id="popup__coments" cols="30" rows="10" placeholder="Комментарий" required></textarea>

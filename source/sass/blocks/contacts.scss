@@ -1,7 +1,7 @@
-.contacts {
-  padding-top: 25px;
+.contacts__container {
   display: flex;
   justify-content: space-between;
+  padding-top: 25px;
   width: 780px;
 }
 
@@ -50,6 +50,7 @@
 
 .contacts__map {
   position: relative;
+  width: 430px;
   margin-top: 5px;
 
   &::before {
@@ -63,4 +64,9 @@
     background-size: contain;
     background-repeat: no-repeat;
   }
+}
+
+.contacts__img {
+  width: 431px;
+  height: 271px;
 }
