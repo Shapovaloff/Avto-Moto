@@ -80,10 +80,14 @@
 
   &--white {
     margin-top: 16px;
-    padding: 15px 19px;
     border: 1px solid $accent-color;
     background-color: #ffffff;
     color: $accent-color;
-    letter-spacing: 0.1em;
+  }
+
+  &--white:hover,
+  &--white:focus {
+    background-color: $accent-color;
+    color: #ffffff;
   }
 }

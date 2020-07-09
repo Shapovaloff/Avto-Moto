@@ -1,0 +1,27 @@
+.card-description {
+  margin-top: 90px;
+  margin-left: 10px;
+}
+
+.card-description__controls {
+  display: flex;
+  width: 585px;
+}
+
+.card-description__btn {
+  width: 195px;
+  text-align: center;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  border: 1px solid #d7d9Df;
+  background-color: transparent;
+  font: inherit;
+  font-size: 20px;
+  line-height: 27px;
+
+  &--active {
+    background-color: $accent-color;
+    color: #ffffff;
+    border: none;
+  }
+}
