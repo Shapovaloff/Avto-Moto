@@ -1,0 +1,26 @@
+.page-header {
+  background-color: #F5F5F9;
+}
+
+.page-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 84px;
+  padding-left: 6px;
+}
+
+.page-header__logo-link {
+  padding-top: 5px;
+}
+
+.site-list__link {
+  font-weight: 600;
+  text-decoration: none;
+  color: #48494D;
+}
+
+.page-header__logo-img {
+  width: 133px;
+  height: 55px;
+}
