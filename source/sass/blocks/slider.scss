@@ -1,0 +1,37 @@
+.slider {
+  position: relative;
+}
+
+.slider__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.slider__item {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.slider__img {
+  display: block;
+}
+
+.slider__new-model {
+  position: absolute;
+  display: block;
+  padding: 7px 10px 10px 10px;
+  text-align: center;
+  width: 122px;
+  background-color: $accent-color;
+  color: #ffffff;
+  top: 0;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}

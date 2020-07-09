@@ -32,7 +32,7 @@
 
   <main class="page-main">
     <h1 class="visually-hidden">Интернет магазин Avto-Moto</h1>
-    <div class="container">
+    <div class="page-main__wrapper container">
       <section class="gallery">
         <h3 class="visually-hidden">Галерея автомобиля</h3>
 
@@ -58,7 +58,7 @@
         </div>
 
         <div class="gallery__preview preview">
-          <button class="preview__btn--prew" type="button" aria-label="Кнопка назада"></button>
+          <button class="preview__btn preview__btn--prew" type="button" aria-label="Кнопка назада" disabled=""></button>
           <ul class="preview__list">
             <li class="preview__item">
               <picture>
@@ -76,7 +76,7 @@
               </picture>
             </li>
           </ul>
-          <button class="preview__btn--next" type="button" aria-label="Кнопка вперёд"></button>
+          <button class="preview__btn preview__btn--next" type="button" aria-label="Кнопка вперёд"></button>
         </div>
       </section>
 
@@ -93,7 +93,7 @@
             <svg class="info__icon" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g opacity=".5" stroke="#48494D" stroke-width="1.5"><path d="M11.194 20h17.612"></path><path d="M11.194 20h17.612" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path><path d="M20 14.53v10.94"></path><path d="M20 14.53v10.94" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path><path d="M28.806 14.53V20"></path><path d="M28.806 14.53V20" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11.194 14.53V25.47"></path><path d="M11.194 14.53V25.47M11.194 14.53a2.686 2.686 0 100-5.373 2.686 2.686 0 000 5.373zM20 14.53a2.686 2.686 0 100-5.373 2.686 2.686 0 000 5.373zM28.806 14.53a2.686 2.686 0 100-5.373 2.686 2.686 0 000 5.373zM11.194 30.843a2.686 2.686 0 100-5.372 2.686 2.686 0 000 5.372zM20 30.843a2.686 2.686 0 100-5.372 2.686 2.686 0 000 5.372z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path></g>
             </svg>
-            <p class="info__descr">механика</p>
+            <p class="info__descr info__descr--transmission">механика</p>
           </li>
           <li class="info__item">
             <svg class="info__icon" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -112,8 +112,8 @@
           <b class="info__price-new">2 300 000 ₽</b>
           <p class="info__price-old">2  400 000 ₽</p>
         </div>
-        <button class="button info__btn">оставить заявку</button>
-        <button class="button info__btn info__btn--white">В кредит от 11 000 ₽</button>
+        <button type="button" class="button info__btn">оставить заявку</button>
+        <button type="button" class="button info__btn info__btn--white">В кредит от 11 000 ₽</button>
       </section>
     </div>
 

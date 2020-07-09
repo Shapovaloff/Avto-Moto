@@ -1,0 +1,56 @@
+.preview {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.preview__btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid #d7d9df;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 13px;
+    background-image: url("../img/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--prew::before {
+    transform: rotate(180deg);
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+
+  &:disabled::before {
+    opacity: 0.4;
+  }
+}
+
+.preview__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  width: 435px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.preview__img {
+  display: block;
+  width: 128px;
+  height: 80px;
+}
