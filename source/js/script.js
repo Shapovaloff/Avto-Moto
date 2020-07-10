@@ -1,6 +1,7 @@
 'use strict';
 
 // Функция слайдер
+
 (function () {
   var sliderElement = document.querySelectorAll('.slider__item');
   var previewElemtnt = document.querySelectorAll('.preview__item');
@@ -62,4 +63,37 @@
 
   nextButton.addEventListener('click', nextSlide);
   prewButton.addEventListener('click', prewSlide);
+})();
+
+// Функция переключение табов
+
+(function () {
+  var tabsButtons = document.querySelectorAll('.card-description__btn');
+  var tabsElement = document.querySelectorAll('.tabs');
+
+  var activeTabsButton = function (indexButtons) {
+    tabsButtons.forEach(function (item) {
+      item.classList.remove('card-description__btn--active');
+
+      if (indexButtons === item) {
+        item.classList.add('card-description__btn--active');
+      }
+    });
+  };
+
+  var activeTabsElement = function (indexElement) {
+    tabsElement.forEach(function (item, index) {
+      item.classList.remove('tabs--active');
+      if (index === indexElement) {
+        item.classList.add('tabs--active');
+      }
+    });
+  };
+
+  tabsButtons.forEach(function (item, index) {
+    item.addEventListener('click', function () {
+      activeTabsButton(index);
+      activeTabsElement(index);
+    });
+  });
 })();
