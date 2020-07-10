@@ -19,11 +19,13 @@
   font-size: 20px;
   line-height: 27px;
   cursor: pointer;
+  outline: none;
+  box-sizing: border-box;
 
   &--active {
     background-color: $accent-color;
     color: #ffffff;
-    border: none;
+    border-color: $accent-color;
     cursor: default;
   }
 
@@ -31,6 +33,6 @@
   &:focus {
     background-color: $accent-color;
     color: #ffffff;
-    border: none;
+    border-color: $accent-color;
   }
 }
