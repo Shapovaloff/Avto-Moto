@@ -74,7 +74,6 @@
   var activeTabsButton = function (indexButtons) {
     tabsButtons.forEach(function (item) {
       item.classList.remove('card-description__btn--active');
-
       if (indexButtons === item) {
         item.classList.add('card-description__btn--active');
       }
@@ -92,8 +91,8 @@
 
   tabsButtons.forEach(function (item, index) {
     item.addEventListener('click', function () {
-      activeTabsButton(index);
       activeTabsElement(index);
+      activeTabsButton(item);
     });
   });
 })();
@@ -132,4 +131,100 @@
 
     beachMarker.setIcon(image);
   };
+})();
+
+// Функция открытия и закрытия модального окна
+
+(function () {
+  var ESCAPE = 'Escape';
+  var popup = document.querySelector('.popup__container');
+  var openButton = document.querySelector('.reviews__btn-feedback');
+  var closeButton = popup.querySelector('.popup__close');
+  var userNameInput = document.querySelector('.popop__field--name');
+  var bodyElement = document.querySelector('body');
+  var popupOverlay = document.querySelector('.popup__overlay');
+
+
+  var noScroll = function () {
+    bodyElement.classList.add('no-scroll');
+  };
+
+  var removeNoScroll = function () {
+    bodyElement.classList.remove('no-scroll');
+  };
+
+  var openPopup = function () {
+    popupOverlay.classList.remove('popup__overlay--hidden');
+    popup.classList.remove('popup--hidden');
+    noScroll();
+    userNameInput.focus();
+  };
+
+  var closePopup = function () {
+    popupOverlay.classList.add('popup__overlay--hidden');
+    popup.classList.add('popup--hidden');
+    removeNoScroll();
+  };
+
+  var onPopupEscPres = function (evt) {
+    if (evt.key === ESCAPE) {
+      closePopup();
+    }
+  };
+
+
+  openButton.addEventListener('click', function () {
+    openPopup();
+    document.addEventListener('keydown', onPopupEscPres);
+  });
+
+  popupOverlay.addEventListener('click', function () {
+    closePopup();
+    document.removeEventListener('keydown', onPopupEscPres);
+  });
+
+  closeButton.addEventListener('click', function () {
+    closePopup();
+    document.removeEventListener('keydown', onPopupEscPres);
+  });
+})();
+
+// Функция валидации формы
+
+(function () {
+  var userNameInput = document.querySelector('.popop__field--name');
+  var messageInput = document.querySelector('.popup__required-input');
+  var userComentText = document.querySelector('.popop__field--text');
+  var messageTextarea = document.querySelector('.popup__required--textarea');
+  var popupForm = document.querySelector('.popup__form');
+
+  var createRequired = function (item, message) {
+    item.classList.add('popop__field--required');
+    message.classList.remove('popup__required--hidden');
+  };
+
+  var removeRequired = function (item, message) {
+    item.classList.remove('popop__field--required');
+    message.classList.add('popup__required--hidden');
+  };
+
+  var submitFunction = function (evt, field, message) {
+    if (!field.value) {
+      evt.preventDefault();
+      createRequired(field, message);
+
+      if (!field.value) {
+        field.focus();
+      }
+
+      field.addEventListener('keydown', function () {
+        removeRequired(field, message);
+      });
+    }
+  };
+
+  popupForm.addEventListener('submit', function (evt) {
+    submitFunction(evt, userNameInput, messageInput);
+    submitFunction(evt, userComentText, messageTextarea);
+  });
 })();
