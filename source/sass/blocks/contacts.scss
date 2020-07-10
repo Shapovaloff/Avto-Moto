@@ -51,6 +51,7 @@
 .contacts__map {
   position: relative;
   width: 430px;
+  height: 271px;
   margin-top: 5px;
 
   &::before {
@@ -64,6 +65,13 @@
     background-size: contain;
     background-repeat: no-repeat;
   }
+}
+
+.contacts__map--card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
 }
 
 .contacts__img {

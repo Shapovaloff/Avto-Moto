@@ -97,3 +97,39 @@
     });
   });
 })();
+
+
+(function () {
+  window.initMap = function () {
+
+    var uluruMap = {lat: 59.9676957, lng: 30.3220136};
+    var uluruPin = {lat: 59.968408, lng: 30.317078};
+    var mapElement = document.querySelector('.contacts__map--card');
+    var ZOOM_CONTROL = 14.6;
+    var imgePins = 'img/map-pin.svg';
+
+    var map = new google.maps.Map(mapElement, {
+      zoom: ZOOM_CONTROL,
+      mapTypeControl: false,
+      zoomControl: true,
+      scrollwheel: false,
+      streetViewControl: false,
+      center: uluruMap
+    });
+
+    var image = {
+      url: imgePins,
+      size: new google.maps.Size(32, 40),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(16, 40),
+      scaledSize: new google.maps.Size(32, 40)
+    };
+
+    var beachMarker = new google.maps.Marker({
+      position: uluruPin,
+      map: map,
+    });
+
+    beachMarker.setIcon(image);
+  };
+})();
