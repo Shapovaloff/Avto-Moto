@@ -103,7 +103,7 @@
 
     var uluruMap = {lat: 59.9676957, lng: 30.3220136};
     var uluruPin = {lat: 59.968408, lng: 30.317078};
-    var mapElement = document.querySelector('.contacts__map--card');
+    var mapElement = document.querySelector('.contacts__map-card');
     var ZOOM_CONTROL = 14.6;
     var imgePins = 'img/map-pin.svg';
 
@@ -140,7 +140,7 @@
   var popup = document.querySelector('.popup__container');
   var openButton = document.querySelector('.reviews__btn-feedback');
   var closeButton = popup.querySelector('.popup__close');
-  var userNameInput = document.querySelector('.popop__field--name');
+  var userNameInput = document.querySelector('.popup__field--name');
   var bodyElement = document.querySelector('body');
   var popupOverlay = document.querySelector('.popup__overlay');
 
@@ -155,14 +155,14 @@
 
   var openPopup = function () {
     popupOverlay.classList.remove('popup__overlay--hidden');
-    popup.classList.remove('popup--hidden');
+    popup.classList.remove('popup__container--hidden');
     noScroll();
     userNameInput.focus();
   };
 
   var closePopup = function () {
     popupOverlay.classList.add('popup__overlay--hidden');
-    popup.classList.add('popup--hidden');
+    popup.classList.add('popup__container--hidden');
     removeNoScroll();
   };
 
@@ -192,20 +192,20 @@
 // Функция валидации формы
 
 (function () {
-  var userNameInput = document.querySelector('.popop__field--name');
+  var userNameInput = document.querySelector('.popup__field--name');
   var messageInput = document.querySelector('.popup__required-input');
-  var userComentText = document.querySelector('.popop__field--text');
-  var messageTextarea = document.querySelector('.popup__required--textarea');
+  var userComentText = document.querySelector('.popup__field--text');
+  var messageTextarea = document.querySelector('.popup__required-textarea');
   var popupForm = document.querySelector('.popup__form');
 
   var createRequired = function (item, message) {
-    item.classList.add('popop__field--required');
-    message.classList.remove('popup__required--hidden');
+    item.classList.add('popup__field--required');
+    message.classList.remove('popup__required-hidden');
   };
 
   var removeRequired = function (item, message) {
-    item.classList.remove('popop__field--required');
-    message.classList.add('popup__required--hidden');
+    item.classList.remove('popup__field--required');
+    message.classList.add('popup__required-hidden');
   };
 
   var submitFunction = function (evt, field, message) {

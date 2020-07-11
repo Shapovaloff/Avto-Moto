@@ -40,7 +40,7 @@
     <h1 class="visually-hidden">Интернет магазин Avto-Moto</h1>
     <div class="page-main__wrapper container">
       <section class="gallery">
-        <h3 class="visually-hidden">Галерея автомобиля</h3>
+        <h2 class="visually-hidden">Галерея автомобиля</h2>
 
         <div class="gallery__slider slider">
           <ul class="slider__list">
@@ -93,28 +93,28 @@
       </section>
 
       <section class="info">
-        <h3 class="info__title">Марпех 11</h3>
+        <h2 class="info__title">Марпех 11</h2>
         <ul class="info__list">
           <li class="info__item">
-            <svg class="info__icon" width="53" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g opacity=".5"><rect x="16.746" y="10.75" width="10.95" height="19.913" rx="1.25" stroke="#48494D" stroke-width="1.5"/><mask id="a" fill="#fff"><rect x="18.097" y="13.097" width="8.258" height="7.226" rx="1"/></mask><rect x="18.097" y="13.097" width="8.258" height="7.226" rx="1" stroke="#48494D" stroke-width="3" mask="url(#a)"/><path d="M27.947 20.834v0c1.184 0 2.143.96 2.143 2.142v2.664c0 1.345.535 3.49 2.499 3.267 1.964-.222 2.32-2.225 2.32-3.652s-.713-4.613-.535-7.304c.179-2.691 1.785-4.998 3.035-5.96" stroke="#48494D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="15.498" y="30.506" width="13.445" height=".996" rx=".498" fill="#48494D" stroke="#48494D" stroke-width=".996"/><path d="M35.418 15.478v0a1.893 1.893 0 011.435 2.022l-.085.874a1.756 1.756 0 01-1.748 1.586v0" stroke="#48494D" stroke-width="1.5"/></g>
+            <svg class="info__icon info__icon--type" width="53" height="40">
+              <use xlink:href="#icon-type"></use>
             </svg>
             <p class="info__descr">бензин</p>
           </li>
           <li class="info__item">
-            <svg class="info__icon" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g opacity=".5" stroke="#48494D" stroke-width="1.5"><path d="M11.194 20h17.612"/><path d="M11.194 20h17.612" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 14.53v10.94"/><path d="M20 14.53v10.94" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M28.806 14.53V20"/><path d="M28.806 14.53V20" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.194 14.53v10.94"/><path d="M11.194 14.53v10.94m0-10.94a2.686 2.686 0 100-5.373 2.686 2.686 0 000 5.373zm8.806 0a2.686 2.686 0 100-5.373 2.686 2.686 0 000 5.373zm8.806 0a2.686 2.686 0 100-5.373 2.686 2.686 0 000 5.373zM11.194 30.843a2.686 2.686 0 100-5.373 2.686 2.686 0 000 5.373zm8.806 0a2.686 2.686 0 100-5.373 2.686 2.686 0 000 5.373z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></g>
+            <svg class="info__icon info__icon--transmission" width="40" height="40">
+              <use xlink:href="#icon-transmission"></use>
             </svg>
             <p class="info__descr info__descr--transmission">механика</p>
           </li>
           <li class="info__item">
-            <svg class="info__icon" width="40" height="40">
+            <svg class="info__icon info__descr--power" width="40" height="40">
               <use xlink:href="#icon-power"></use>
             </svg>
             <p class="info__descr">100 л.с.</p>
           </li>
           <li class="info__item">
-            <svg class="info__icon" width="40" height="40">
+            <svg class="info__icon info__icon--valume" width="40" height="40">
               <use xlink:href="#icon-valume"></use>
             </svg>
             <p class="info__descr">1.4 л</p>
@@ -130,7 +130,7 @@
     </div>
 
     <section class="card-description">
-      <h3 class="visually-hidden">Описание карточки автомобиля</h3>
+      <h2 class="visually-hidden">Описание карточки автомобиля</h2>
       <div class="container">
         <div class="card-description__controls">
           <button type="button" class="card-description__btn card-description__btn--active">Характеристики</button>
@@ -178,7 +178,7 @@
           <ul class="reviews__description">
 
             <li class="reviews__description-item">
-              <h3 class="reviews__name">Борис Иванов</h3>
+              <b class="reviews__name">Борис Иванов</b>
               <ul class="reviews__list">
                 <li class="reviews__item">
                   <svg class="reviews__plus" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -219,7 +219,7 @@
             </li>
 
             <li class="reviews__description-item">
-              <h3 class="reviews__name">Марсель Исмагилов</h3>
+              <b class="reviews__name">Марсель Исмагилов</b>
               <ul class="reviews__list">
                 <li class="reviews__item">
                   <svg class="reviews__plus" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -289,7 +289,7 @@
             </div>
 
             <div class="contacts__map">
-              <div class="contacts__map--card "></div>
+              <div class="contacts__map-card"></div>
               <picture>
                 <source type="image/webp" srcset="img/map@1x.webp 1x, img/map@2x.webp 2x">
                 <img class="contacts__img" src="img/map@1x.jpg" srcset="img/map@2x.jpg 2x" width="431" height="271" alt="Наш адрес Санкт-Петербург, набережная реки Карповки, дом 5">
@@ -330,30 +330,29 @@
     </footer>
 
 
-
     <section class="popup">
       <div class="popup__overlay popup__overlay--hidden"></div>
-      <div class="popup__container popup--hidden">
+      <div class="popup__container popup__container--hidden">
         <button class="popup__close" type="button" aria-label="Кнопка закрытия модально окна"></button>
-        <h3 class="popup__title">Оставить отзыв</h3>
+        <h2 class="popup__title">Оставить отзыв</h2>
         <form class="popup__form" action="https://echo.htmlacademy.ru" method="POST">
           <div class="popup__wrapper">
             <div class="popup__column">
-              <span class="popup__required-input popup__required--hidden">Пожалуйста, заполните поле</span>
-              <p class="popop__item">
-                <svg class="popop__required" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <span class="popup__required-input popup__required-hidden">Пожалуйста, заполните поле</span>
+              <p class="popup__item">
+                <svg class="popup__required" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3.519 5.778L3.434 3.908L4.998 4.911L5.542 3.993L3.893 3.143L5.542 2.293L4.998 1.358L3.434 2.361L3.519 0.490999H2.448L2.533 2.361L0.952 1.358L0.425 2.293L2.074 3.143L0.425 3.993L0.952 4.911L2.533 3.908L2.448 5.778H3.519Z" fill="#D12136"/>
                 </svg>
-                <label class="visually-hidden" for="popop__name">Имя</label>
-                <input class="popop__field popop__field--name" name="name" id="popop__name" type="text" placeholder="Имя">
+                <label class="visually-hidden" for="popup__name">Имя</label>
+                <input class="popup__field popup__field--name" name="name" id="popup__name" type="text" placeholder="Имя">
               </p>
-              <p class="popop__item">
-                <label class="visually-hidden" for="popop__advantages">Достоинства</label>
-                <input class="popop__field popop__field--advantages" name="advantages" id="popop__advantages" type="text" placeholder="Достоинства">
+              <p class="popup__item">
+                <label class="visually-hidden" for="popup__advantages">Достоинства</label>
+                <input class="popup__field popup__field--advantages" name="advantages" id="popup__advantages" type="text" placeholder="Достоинства">
               </p>
-              <p class="popop__item">
-                <label class="visually-hidden" for="popop__disadvantages">Недостатки</label>
-                <input class="popop__field popop__field--disadvantages" name="disadvantages" id="popop__disadvantages" type="text" placeholder="Недостатки">
+              <p class="popup__item">
+                <label class="visually-hidden" for="popup__disadvantages">Недостатки</label>
+                <input class="popup__field popup__field--disadvantages" name="disadvantages" id="popup__disadvantages" type="text" placeholder="Недостатки">
               </p>
             </div>
 
@@ -370,12 +369,12 @@
                 </div>
               </div>
               <p class="popup__coments">
-                <span class="popup__required--textarea popup__required--hidden">Пожалуйста, заполните поле</span>
-                <svg class="popop__required" width="6" height="6">
+                <span class="popup__required-textarea popup__required-hidden">Пожалуйста, заполните поле</span>
+                <svg class="popup__required" width="6" height="6">
                   <use xlink:href="#icon-star-required"></use>
                 </svg>
                 <label class="visually-hidden" for="popup__coments-text">Комментарий</label>
-                <textarea class="popop__field popop__field--text" name="coments" id="popup__coments" cols="30" rows="10" placeholder="Комментарий"></textarea>
+                <textarea class="popup__field popup__field--text" name="coments" id="popup__coments" cols="30" rows="10" placeholder="Комментарий"></textarea>
               </p>
             </div>
           </div>
@@ -384,7 +383,7 @@
       </div>
     </section>
 
-    <script src="js/script.js"></script>
+    <script defer src="js/script.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDluwBfvy_M346vmyhvVLD62kK76nnVtss&callback=initMap"></script>
 
   </body>

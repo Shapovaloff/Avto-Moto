@@ -15,6 +15,7 @@
   border-radius: 50%;
   border: 1px solid #d7d9df;
   background-color: transparent;
+  outline: none;
   cursor: pointer;
 
   &::before {
@@ -27,12 +28,22 @@
     background-size: contain;
   }
 
+  &:hover,
+  &:focus {
+    border-color: #48494d;
+  }
+
   &--prew::before {
     transform: rotate(180deg);
   }
 
   &:disabled {
     cursor: default;
+  }
+
+  &:hover:disabled,
+  &:focus:disabled {
+    border-color: #d7d9df;
   }
 
   &:disabled::before {
