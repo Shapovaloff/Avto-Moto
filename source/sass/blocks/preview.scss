@@ -54,6 +54,7 @@
 .preview__list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 0;
   width: 435px;
   padding: 0;

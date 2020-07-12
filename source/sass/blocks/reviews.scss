@@ -35,7 +35,6 @@
   list-style-type: none;
 }
 
-
 .reviews__item {
   padding-left: 20px;
   position: relative;
@@ -86,7 +85,7 @@
   width: 105px;
   height: 16px;
   margin-right: 20px;
-  background-image: url('../img/review-star-off.svg');
+  background-image: url("../img/review-star-off.svg");
   background-repeat: repeat-x;
   background-size: 21px 16px;
 }
@@ -97,7 +96,7 @@
   height: 16px;
   top: 0;
   left: 0;
-  background-image: url('../img/review-star-on.svg');
+  background-image: url("../img/review-star-on.svg");
   background-repeat: repeat-x;
   background-size: 21px 16px;
 }

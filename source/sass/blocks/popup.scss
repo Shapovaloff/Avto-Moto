@@ -156,6 +156,12 @@
   height: 26px;
   background-image: url("../img/popup_star.svg");
   background-repeat: repeat-x;
+  background-size: 35px 26px;
+
+  &:focus-within {
+    outline: 1px solid #000000;
+    outline-offset: 4px;
+  }
 }
 
 .popup__star {
@@ -225,10 +231,13 @@
 .popup__star:hover {
   background-image: url("../img/popup_star-red.svg");
   background-repeat: repeat-x;
+  background-size: 35px 26px;
 }
 
 .popup__star:hover ~ .popup__star {
   background-image: url("../img/popup_star.svg");
+  background-repeat: repeat-x;
+  background-size: 35px 26px;
 }
 
 .popup__coments {

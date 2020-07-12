@@ -71,6 +71,10 @@
   var tabsButtons = document.querySelectorAll('.card-description__btn');
   var tabsElement = document.querySelectorAll('.tabs');
 
+  tabsElement.forEach(function (item) {
+    item.classList.remove('tabs--nojs');
+  });
+
   var activeTabsButton = function (indexButtons) {
     tabsButtons.forEach(function (item) {
       item.classList.remove('card-description__btn--active');
@@ -97,6 +101,7 @@
   });
 })();
 
+// Функция отрисовки карты
 
 (function () {
   window.initMap = function () {
