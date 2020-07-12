@@ -80,8 +80,26 @@
   margin-bottom: 23px;
 }
 
-.reviews__block-stars {
-  padding-right: 21px;
+.reviews__stars {
+  position: relative;
+  display: block;
+  width: 105px;
+  height: 16px;
+  margin-right: 20px;
+  background-image: url('../img/review-star-off.svg');
+  background-repeat: repeat-x;
+  background-size: 21px 16px;
+}
+
+.reviews__stars-raiting {
+  position: absolute;
+  width: 72px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  background-image: url('../img/review-star-on.svg');
+  background-repeat: repeat-x;
+  background-size: 21px 16px;
 }
 
 .reviews__text-advises {

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <title>Стартовый шаблон</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
   <div style="display: none">
     <include src="build/img/sprite_auto.svg"></include>
@@ -53,13 +55,15 @@
             <li class="slider__item">
               <picture>
                 <source type="image/webp" srcset="img/slider-2@1x.webp 1x, img/slider-2@2x.webp 2x">
-                <img class="slider__img" width="600" height="375" src="img/slider-2@1x.jpg" srcset="img/slider-2@2x.jpg 2x" alt="Фото машины вид с переди">
+                <img class="slider__img" width="600" height="375" src="img/slider-2@1x.jpg"
+                  srcset="img/slider-2@2x.jpg 2x" alt="Фото машины вид салона">
               </picture>
             </li>
             <li class="slider__item">
               <picture>
                 <source type="image/webp" srcset="img/slider-3@1x.webp 1x, img/slider-3@2x.webp 2x">
-                <img class="slider__img" width="600" height="375" src="img/slider-3@1x.jpg" srcset="img/slider-3@2x.jpg 2x" alt="Фото машины вид с переди">
+                <img class="slider__img" width="600" height="375" src="img/slider-3@1x.jpg"
+                  srcset="img/slider-3@2x.jpg 2x" alt="Фото машины вид панели приборов">
               </picture>
             </li>
           </ul>
@@ -72,19 +76,22 @@
             <li class="preview__item">
               <picture>
                 <source type="image/webp" srcset="img/slider-1@1x.webp 1x, img/slider-1@2x.webp 2x">
-                <img class="preview__img" width="128" height="80" src="img/slider-1@1x.jpg" srcset="img/slider-1@2x.jpg 2x" alt="Фото машины вид с переди">
+                <img class="preview__img" width="128" height="80" src="img/slider-1@1x.jpg"
+                  srcset="img/slider-1@2x.jpg 2x" alt="Фото машины вид с переди">
               </picture>
             </li>
             <li class="preview__item">
               <picture>
                 <source type="image/webp" srcset="img/slider-2@1x.webp 1x, img/slider-2@2x.webp 2x">
-                <img class="preview__img" width="128" height="80" src="img/slider-2@1x.jpg" srcset="img/slider-2@2x.jpg 2x" alt="Фото машины вид с переди">
+                <img class="preview__img" width="128" height="80" src="img/slider-2@1x.jpg"
+                  srcset="img/slider-2@2x.jpg 2x" alt="Фото машины вид салона">
               </picture>
             </li>
             <li class="preview__item">
               <picture>
                 <source type="image/webp" srcset="img/slider-3@1x.webp 1x, img/slider-3@2x.webp 2x">
-                <img class="preview__img" width="128" height="80" src="img/slider-3@1x.jpg" srcset="img/slider-3@2x.jpg 2x" alt="Фото машины вид с переди">
+                <img class="preview__img" width="128" height="80" src="img/slider-3@1x.jpg"
+                  srcset="img/slider-3@2x.jpg 2x" alt="Фото машины вид панели приборов">
               </picture>
             </li>
           </ul>
@@ -108,7 +115,7 @@
             <p class="info__descr info__descr--transmission">механика</p>
           </li>
           <li class="info__item">
-            <svg class="info__icon info__descr--power" width="40" height="40">
+            <svg class="info__icon info__icon--power" width="40" height="40">
               <use xlink:href="#icon-power"></use>
             </svg>
             <p class="info__descr">100 л.с.</p>
@@ -181,16 +188,16 @@
               <b class="reviews__name">Борис Иванов</b>
               <ul class="reviews__list">
                 <li class="reviews__item">
-                  <svg class="reviews__plus" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3.61816 4.36377H0.703125V3.06006H3.61816V0.0717773H4.93652V3.06006H7.85889V4.36377H4.93652V7.3374H3.61816V4.36377Z" fill="#D12136"/>
+                  <svg class="reviews__plus" width="8" height="8">
+                    <use xlink:href="#icon-plus"></use>
                   </svg>
                   <span class="reviews__title reviews__title--advantages">Достоинства</span>
                   <p class="reviews__text">мощность, внешний вид</p>
                 </li>
 
                 <li class="reviews__item">
-                  <svg class="reviews__minus" width="7" height="2" viewBox="0 0 7 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.600586 1.66748V0.275879H6.89941V1.66748H0.600586Z" fill="#D12136"/>
+                  <svg class="reviews__minus" width="7" height="2">
+                    <use xlink:href="#icon-minus"></use>
                   </svg>
                   <span class="reviews__title reviews__title--disadvantages">Недостатки</span>
                   <p class="reviews__text">Слабые тормозные колодки (пришлось заменить)</p>
@@ -198,19 +205,16 @@
 
                 <li class="reviews__item reviews__item--comment">
                   <b class="reviews__title reviews__title--comment">Комментарий</b>
-                  <p class="reviews__text">Взяли по трейд-ин, на выгодных условиях у дилера. Стильная внешка и крут по базовым характеристикам. Не думал, что пересяду на китайский автопром, но сейчас гоняю и понимаю, что полностью доволен.</p>
+                  <p class="reviews__text">Взяли по трейд-ин, на выгодных условиях у дилера. Стильная внешка и крут по
+                    базовым характеристикам. Не думал, что пересяду на китайский автопром, но сейчас гоняю и понимаю,
+                    что полностью доволен.</p>
                 </li>
               </ul>
 
               <div class="reviews__block-rating">
-                <div class="reviews__block-stars">
-                  <!-- Реализую когда буду писать JS -->
-                  <img class="reviews__star" src="img/star-red.svg" alt="Звезда">
-                  <img class="reviews__star" src="img/star-red.svg" alt="Звезда">
-                  <img class="reviews__star" src="img/star-red.svg" alt="Звезда">
-                  <img class="reviews__star" src="img/star-red-grey.svg" alt="Звезда">
-                  <img class="reviews__star" src="img/star-grey.svg" alt="Звезда">
-                </div>
+                <span class="reviews__stars">
+                  <span class="reviews__stars-raiting"></span>
+                </span>
                 <p class="reviews__text-advises">Советует</p>
               </div>
 
@@ -222,16 +226,16 @@
               <b class="reviews__name">Марсель Исмагилов</b>
               <ul class="reviews__list">
                 <li class="reviews__item">
-                  <svg class="reviews__plus" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3.61816 4.36377H0.703125V3.06006H3.61816V0.0717773H4.93652V3.06006H7.85889V4.36377H4.93652V7.3374H3.61816V4.36377Z" fill="#D12136"/>
+                  <svg class="reviews__plus" width="8" height="8">
+                    <use xlink:href="#icon-plus"></use>
                   </svg>
                   <span class="reviews__title reviews__title--advantages">Достоинства</span>
                   <p class="reviews__text">Cтиль, комфорт, управляемость</p>
                 </li>
 
                 <li class="reviews__item">
-                  <svg class="reviews__minus" width="7" height="2" viewBox="0 0 7 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.600586 1.66748V0.275879H6.89941V1.66748H0.600586Z" fill="#D12136"/>
+                  <svg class="reviews__minus" width="7" height="2">
+                    <use xlink:href="#icon-minus"></use>
                   </svg>
                   <span class="reviews__title reviews__title--disadvantages">Недостатки</span>
                   <p class="reviews__text">Дорогой ремонт и обслуживание</p>
@@ -239,19 +243,17 @@
 
                 <li class="reviews__item reviews__item--comment">
                   <b class="reviews__title reviews__title--comment">Комментарий</b>
-                  <p class="reviews__text">Дизайн отличный, управление просто шикарно, ощущения за рулём такой машины особые. Но ремонт очень дорогой. Пару месяцев назад пришлось менять двигатель. По стоимости вышло как новый автомобиль. Так что, если покупать эту машину, надо быть готовым к большим расходам на обслуживание.</p>
+                  <p class="reviews__text">Дизайн отличный, управление просто шикарно, ощущения за рулём такой машины
+                    особые. Но ремонт очень дорогой. Пару месяцев назад пришлось менять двигатель. По стоимости вышло
+                    как новый автомобиль. Так что, если покупать эту машину, надо быть готовым к большим расходам на
+                    обслуживание.</p>
                 </li>
               </ul>
 
               <div class="reviews__block-rating">
-                <div class="reviews__block-stars">
-                  <!-- Реализую когда буду писать JS -->
-                  <img class="reviews__star" src="img/star-red.svg" alt="Звезда">
-                  <img class="reviews__star" src="img/star-red.svg" alt="Звезда">
-                  <img class="reviews__star" src="img/star-red.svg" alt="Звезда">
-                  <img class="reviews__star" src="img/star-red-grey.svg" alt="Звезда">
-                  <img class="reviews__star" src="img/star-grey.svg" alt="Звезда">
-                </div>
+                <span class="reviews__stars">
+                  <span class="reviews__stars-raiting"></span>
+                </span>
                 <p class="reviews__text-advises">Советует</p>
               </div>
 
@@ -301,90 +303,145 @@
     </section>
   </main>
 
-    <footer class="page-footer">
-      <div class="container">
-        <ul class="page-footer__user-list user-list">
-          <li class="user-list__item">
-            <a href="#" class="user-list__link">Корпоративным клиентам</a>
-          </li>
-          <li class="user-list__item">
-            <a href="#" class="user-list__link">Клиентам</a>
-          </li>
-          <li class="user-list__item">
-            <a href="#" class="user-list__link">Аренда авто</a>
-          </li>
-          <li class="user-list__item">
-            <a href="#" class="user-list__link">Каршеринг</a>
-          </li>
-          <li class="user-list__item">
-            <a href="#" class="user-list__link">Как продать авто</a>
-          </li>
-          <li class="user-list__item">
-            <a href="#" class="user-list__link">Traid-in</a>
-          </li>
-          <li class="user-list__item">
-            <a href="#" class="user-list__link">Test draiv</a>
-          </li>
-        </ul>
-      </div>
-    </footer>
+  <footer class="page-footer">
+    <div class="container">
+      <ul class="page-footer__user-list user-list">
+        <li class="user-list__item">
+          <a href="#" class="user-list__link">Корпоративным клиентам</a>
+        </li>
+        <li class="user-list__item">
+          <a href="#" class="user-list__link">Клиентам</a>
+        </li>
+        <li class="user-list__item">
+          <a href="#" class="user-list__link">Аренда авто</a>
+        </li>
+        <li class="user-list__item">
+          <a href="#" class="user-list__link">Каршеринг</a>
+        </li>
+        <li class="user-list__item">
+          <a href="#" class="user-list__link">Как продать авто</a>
+        </li>
+        <li class="user-list__item">
+          <a href="#" class="user-list__link">Traid-in</a>
+        </li>
+        <li class="user-list__item">
+          <a href="#" class="user-list__link">Test draiv</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
 
 
-    <section class="popup">
-      <div class="popup__overlay popup__overlay--hidden"></div>
-      <div class="popup__container popup__container--hidden">
-        <button class="popup__close" type="button" aria-label="Кнопка закрытия модально окна"></button>
-        <h2 class="popup__title">Оставить отзыв</h2>
-        <form class="popup__form" action="https://echo.htmlacademy.ru" method="POST">
-          <div class="popup__wrapper">
-            <div class="popup__column">
-              <span class="popup__required-input popup__required-hidden">Пожалуйста, заполните поле</span>
-              <p class="popup__item">
-                <svg class="popup__required" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3.519 5.778L3.434 3.908L4.998 4.911L5.542 3.993L3.893 3.143L5.542 2.293L4.998 1.358L3.434 2.361L3.519 0.490999H2.448L2.533 2.361L0.952 1.358L0.425 2.293L2.074 3.143L0.425 3.993L0.952 4.911L2.533 3.908L2.448 5.778H3.519Z" fill="#D12136"/>
-                </svg>
-                <label class="visually-hidden" for="popup__name">Имя</label>
-                <input class="popup__field popup__field--name" name="name" id="popup__name" type="text" placeholder="Имя">
-              </p>
-              <p class="popup__item">
-                <label class="visually-hidden" for="popup__advantages">Достоинства</label>
-                <input class="popup__field popup__field--advantages" name="advantages" id="popup__advantages" type="text" placeholder="Достоинства">
-              </p>
-              <p class="popup__item">
-                <label class="visually-hidden" for="popup__disadvantages">Недостатки</label>
-                <input class="popup__field popup__field--disadvantages" name="disadvantages" id="popup__disadvantages" type="text" placeholder="Недостатки">
-              </p>
-            </div>
-
-            <div class="popup__column">
-              <div class="popup__assessment">
-                <p class="popup__assessment-text">Оцените товар:</p>
-                <div class="popup__assessment-star">
-                  <!-- Реализую когда буду писать JS -->
-                  <img width="27" height="26" class="popup__star" src="img/popup_star.svg" alt="Звезда">
-                  <img width="27" height="26" class="popup__star" src="img/popup_star.svg" alt="Звезда">
-                  <img width="27" height="26" class="popup__star" src="img/popup_star.svg" alt="Звезда">
-                  <img width="27" height="26" class="popup__star" src="img/popup_star.svg" alt="Звезда">
-                  <img width="27" height="26" class="popup__star" src="img/popup_star.svg" alt="Звезда">
-                </div>
-              </div>
-              <p class="popup__coments">
-                <span class="popup__required-textarea popup__required-hidden">Пожалуйста, заполните поле</span>
-                <svg class="popup__required" width="6" height="6">
-                  <use xlink:href="#icon-star-required"></use>
-                </svg>
-                <label class="visually-hidden" for="popup__coments-text">Комментарий</label>
-                <textarea class="popup__field popup__field--text" name="coments" id="popup__coments" cols="30" rows="10" placeholder="Комментарий"></textarea>
-              </p>
-            </div>
+  <section class="popup">
+    <div class="popup__overlay popup__overlay--hidden"></div>
+    <div class="popup__container popup__container--hidden">
+      <button class="popup__close" type="button" aria-label="Кнопка закрытия модально окна"></button>
+      <h2 class="popup__title">Оставить отзыв</h2>
+      <form class="popup__form" action="https://echo.htmlacademy.ru" method="POST">
+        <div class="popup__wrapper">
+          <div class="popup__column">
+            <span class="popup__required-input popup__required-hidden">Пожалуйста, заполните поле</span>
+            <p class="popup__item">
+              <svg class="popup__required" width="6" height="6">
+                <use xlink:href="#icon-star-required"></use>
+              </svg>
+              <label class="visually-hidden" for="popup__name">Имя</label>
+              <input class="popup__field popup__field--name" name="name" id="popup__name" type="text" placeholder="Имя">
+            </p>
+            <p class="popup__item">
+              <label class="visually-hidden" for="popup__advantages">Достоинства</label>
+              <input class="popup__field popup__field--advantages" name="advantages" id="popup__advantages" type="text"
+                placeholder="Достоинства">
+            </p>
+            <p class="popup__item">
+              <label class="visually-hidden" for="popup__disadvantages">Недостатки</label>
+              <input class="popup__field popup__field--disadvantages" name="disadvantages" id="popup__disadvantages" type="text" placeholder="Недостатки">
+            </p>
           </div>
-          <button class="button popup__btn" type="submit">Оставить отзыв</button>
-        </form>
+
+          <div class="popup__column">
+            <div class="popup__assessment">
+              <p class="popup__assessment-text">Оцените товар:</p>
+              <fieldset class="popup__fieldset-star">
+                <legend class="visually-hidden">Рейтинг</legend>
+                <div class="popup__rating-group">
+                  <input class="popup__input visually-hidden" id="popup__star-1" type="radio" name="start" value="1" checked>
+                  <label class="popup__star popup__star--1" for="popup__star-1"></label>
+                  <input class="popup__input visually-hidden" id="popup__star-2" type="radio" name="start" value="2">
+                  <label class="popup__star popup__star--2" for="popup__star-2"></label>
+                  <input class="popup__input visually-hidden" id="popup__star-3" type="radio" name="start" value="3">
+                  <label class="popup__star popup__star--3" for="popup__star-3"></label>
+                  <input class="popup__input visually-hidden" id="popup__star-4" type="radio" name="start" value="4">
+                  <label class="popup__star popup__star--4" for="popup__star-4"></label>
+                  <input class="popup__input visually-hidden" id="popup__star-5" type="radio" name="start" value="5">
+                  <label class="popup__star popup__star--5" for="popup__star-5"></label>
+                  <input class="popup__input visually-hidden" id="popup__star-6" type="radio" name="start" value="6">
+                  <label class="popup__star popup__star--6" for="popup__star-6"></label>
+                  <input class="popup__input visually-hidden" id="popup__star-7" type="radio" name="start" value="7">
+                  <label class="popup__star popup__star--7" for="popup__star-7"></label>
+                  <input class="popup__input visually-hidden" id="popup__star-8" type="radio" name="start" value="8">
+                  <label class="popup__star popup__star--8" for="popup__star-8"></label>
+                  <input class="popup__input visually-hidden" id="popup__star-9" type="radio" name="start" value="9">
+                  <label class="popup__star popup__star--9" for="popup__star-9"></label>
+                  <input class="popup__input visually-hidden" id="popup__star-10" type="radio" name="start" value="10">
+                  <label class="popup__star popup__star--10" for="popup__star-10"></label>
+                </div>
+              </fieldset>
+            </div>
+            <p class="popup__coments">
+              <span class="popup__required-textarea popup__required-hidden">Пожалуйста, заполните поле</span>
+              <svg class="popup__required" width="6" height="6">
+                <use xlink:href="#icon-star-required"></use>
+              </svg>
+              <label class="visually-hidden">Комментарий</label>
+              <textarea class="popup__field popup__field--text" name="coments" placeholder="Комментарий"></textarea>
+            </p>
+          </div>
+        </div>
+        <button class="button popup__btn" type="submit">Оставить отзыв</button>
+      </form>
+    </div>
+  </section>
+
+
+  <template class="template">
+    <li class="reviews__description-item">
+      <b class="reviews__name">Имя автора</b>
+      <ul class="reviews__list">
+        <li class="reviews__item">
+          <svg class="reviews__plus" width="8" height="8">
+            <use xlink:href="#icon-plus"></use>
+          </svg>
+          <span class="reviews__title reviews__title--advantages">Достоинства</span>
+          <p class="reviews__text reviews__text--advantages">Описание достоинств</p>
+        </li>
+        <li class="reviews__item">
+          <svg class="reviews__minus" width="7" height="2">
+            <use xlink:href="#icon-minus"></use>
+          </svg>
+          <span class="reviews__title reviews__title--disadvantages">Недостатки</span>
+          <p class="reviews__text reviews__text--disadvantages">Описанисание недостатков</p>
+        </li>
+        <li class="reviews__item reviews__item--comment">
+          <b class="reviews__title reviews__title--comment">Комментарий</b>
+          <p class="reviews__text reviews__text--comment">Коментарий автора</p>
+        </li>
+      </ul>
+      <div class="reviews__block-rating">
+        <span class="reviews__stars">
+          <span class="reviews__stars-raiting"></span>
+        </span>
+        <p class="reviews__text-advises">Советует</p>
       </div>
-    </section>
+      <span class="reviews__text-answer">1 минуту назад</span>
+      <button type="button" class="reviews__btn-answer">Ответить</button>
+    </li>
+  </template>
 
-    <script defer src="js/script.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDluwBfvy_M346vmyhvVLD62kK76nnVtss&callback=initMap"></script>
 
-  </body>
+  <script defer src="js/script.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDluwBfvy_M346vmyhvVLD62kK76nnVtss&callback=initMap"></script>
+
+</body>
+
 </html>

@@ -133,98 +133,150 @@
   };
 })();
 
-// Функция открытия и закрытия модального окна
+
+// Функция модального окна
 
 (function () {
-  var ESCAPE = 'Escape';
-  var popup = document.querySelector('.popup__container');
+  var newReviews = [];
+  var starRaiting = ['8', '17', '29', '37', '50', '58', '71', '79', '92', '100'];
+
   var openButton = document.querySelector('.reviews__btn-feedback');
-  var closeButton = popup.querySelector('.popup__close');
-  var userNameInput = document.querySelector('.popup__field--name');
-  var bodyElement = document.querySelector('body');
+  var popup = document.querySelector('.popup__container');
   var popupOverlay = document.querySelector('.popup__overlay');
+  var bodyElement = document.querySelector('body');
+  var closeButton = popup.querySelector('.popup__close');
 
+  var fieldName = popup.querySelector('.popup__field--name');
+  var fieldAdvantages = popup.querySelector('.popup__field--advantages');
+  var fieldDisadvantages = popup.querySelector('.popup__field--disadvantages');
+  var fieldStars = document.querySelectorAll('.popup__input');
+  var fieldText = popup.querySelector('.popup__field--text');
 
-  var noScroll = function () {
-    bodyElement.classList.add('no-scroll');
-  };
-
-  var removeNoScroll = function () {
-    bodyElement.classList.remove('no-scroll');
-  };
-
-  var openPopup = function () {
-    popupOverlay.classList.remove('popup__overlay--hidden');
-    popup.classList.remove('popup__container--hidden');
-    noScroll();
-    userNameInput.focus();
-  };
-
-  var closePopup = function () {
-    popupOverlay.classList.add('popup__overlay--hidden');
-    popup.classList.add('popup__container--hidden');
-    removeNoScroll();
-  };
-
-  var onPopupEscPres = function (evt) {
-    if (evt.key === ESCAPE) {
-      closePopup();
-    }
-  };
-
-
-  openButton.addEventListener('click', function () {
-    openPopup();
-    document.addEventListener('keydown', onPopupEscPres);
-  });
-
-  popupOverlay.addEventListener('click', function () {
-    closePopup();
-    document.removeEventListener('keydown', onPopupEscPres);
-  });
-
-  closeButton.addEventListener('click', function () {
-    closePopup();
-    document.removeEventListener('keydown', onPopupEscPres);
-  });
-})();
-
-// Функция валидации формы
-
-(function () {
-  var userNameInput = document.querySelector('.popup__field--name');
   var messageInput = document.querySelector('.popup__required-input');
-  var userComentText = document.querySelector('.popup__field--text');
   var messageTextarea = document.querySelector('.popup__required-textarea');
+
+  var listReviews = document.querySelector('.reviews__description');
   var popupForm = document.querySelector('.popup__form');
+  var template = document.querySelector('.template').content;
+  var newItemReviews = template.querySelector('.reviews__description-item');
 
-  var createRequired = function (item, message) {
-    item.classList.add('popup__field--required');
-    message.classList.remove('popup__required-hidden');
-  };
+  var isStirageSupport = true;
 
-  var removeRequired = function (item, message) {
-    item.classList.remove('popup__field--required');
-    message.classList.add('popup__required-hidden');
-  };
+  var loadReviews = function () {
+    if (localStorage.getItem('newReviews') && isStirageSupport) {
+      newReviews = JSON.parse(localStorage.getItem('newReviews'));
 
-  var submitFunction = function (evt, field, message) {
-    if (!field.value) {
-      evt.preventDefault();
-      createRequired(field, message);
+      newReviews.forEach(function (item) {
+        var reviews = newItemReviews.cloneNode(true);
 
-      if (!field.value) {
-        field.focus();
-      }
-
-      field.addEventListener('keydown', function () {
-        removeRequired(field, message);
+        reviews.querySelector('.reviews__name').textContent = item.name;
+        reviews.querySelector('.reviews__text--advantages').textContent = item.advantages;
+        reviews.querySelector('.reviews__text--disadvantages').textContent = item.disadvantages;
+        reviews.querySelector('.reviews__text--comment').textContent = item.text;
+        listReviews.appendChild(reviews);
       });
     }
   };
 
-  popupForm.addEventListener('submit', function (evt) {
-    submitFunction(evt, userNameInput, messageInput);
-    submitFunction(evt, userComentText, messageTextarea);
+  loadReviews();
+
+  var openPopup = function (evt) {
+    evt.preventDefault();
+    popupOverlay.classList.remove('popup__overlay--hidden');
+    popup.classList.remove('popup__container--hidden');
+    bodyElement.classList.add('no-scroll');
+  };
+
+  var closePopup = function (evt) {
+    evt.preventDefault();
+    popupOverlay.classList.add('popup__overlay--hidden');
+    popup.classList.add('popup__container--hidden');
+    bodyElement.classList.remove('no-scroll');
+  };
+
+  openButton.addEventListener('click', function (evt) {
+    openPopup(evt);
+    fieldName.focus();
   });
+
+  closeButton.addEventListener('click', function (evt) {
+    closePopup(evt);
+  });
+
+  popupOverlay.addEventListener('click', function (evt) {
+    closePopup(evt);
+  });
+
+  popupForm.addEventListener('submit', function (evt) {
+    if (!fieldName.value || !fieldText.value) {
+      evt.preventDefault();
+      if (!fieldName.value) {
+        fieldName.classList.add('popup__field--required');
+        messageInput.classList.remove('popup__required-hidden');
+      }
+
+      fieldName.addEventListener('input', function () {
+        fieldName.classList.remove('popup__field--required');
+        messageInput.classList.add('popup__required-hidden');
+      });
+
+      if (!fieldText.value) {
+        fieldText.classList.add('popup__field--required');
+        messageTextarea.classList.remove('popup__required-hidden');
+      }
+
+      fieldText.addEventListener('input', function () {
+        fieldText.classList.remove('popup__field--required');
+        messageTextarea.classList.add('popup__required-hidden');
+      });
+
+    } else {
+      evt.preventDefault();
+
+      var fieldStarsValue;
+      for (var i = 0; i < fieldStars.length; i++) {
+        if (fieldStars[i].checked) {
+          fieldStarsValue = fieldStars[i].value;
+        }
+      }
+
+      var reviews = newItemReviews.cloneNode(true);
+      reviews.querySelector('.reviews__name').textContent = fieldName.value;
+      reviews.querySelector('.reviews__text--advantages').textContent = fieldAdvantages.value;
+      reviews.querySelector('.reviews__text--disadvantages').textContent = fieldDisadvantages.value;
+      reviews.querySelector('.reviews__stars-raiting').style.width = starRaiting[fieldStarsValue - 1] + 'px';
+      reviews.querySelector('.reviews__text--comment').textContent = fieldText.value;
+      listReviews.appendChild(reviews);
+
+      if (isStirageSupport) {
+        var review = {
+          name: fieldName.value,
+          advantages: fieldAdvantages.value,
+          disadvantages: fieldDisadvantages.value,
+          star: fieldStarsValue,
+          text: fieldText.value
+        };
+
+        newReviews.push(review);
+        localStorage.setItem('newReviews', JSON.stringify(newReviews));
+      }
+
+      fieldName.value = '';
+      fieldAdvantages.value = '';
+      fieldDisadvantages.value = '';
+      fieldText.value = '';
+      fieldStars[0].checked = true;
+
+      closePopup(evt);
+    }
+  });
+
+  window.addEventListener('keydown', function (evt) {
+    if (evt.keyCode === 27) {
+      if (!popup.classList.contains('popup__container--hidden')) {
+        closePopup(evt);
+      }
+    }
+  });
+
 })();
