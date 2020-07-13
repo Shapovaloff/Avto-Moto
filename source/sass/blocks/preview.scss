@@ -7,9 +7,6 @@
 
 .preview__btn {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 52px;
   height: 52px;
   border-radius: 50%;
@@ -23,6 +20,9 @@
     position: absolute;
     width: 20px;
     height: 13px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-image: url("../img/arrow.svg");
     background-repeat: no-repeat;
     background-size: contain;
@@ -34,7 +34,7 @@
   }
 
   &--prew::before {
-    transform: rotate(180deg);
+    transform: rotate(180deg) translate(50%, 50%);
   }
 
   &:disabled {

@@ -101,6 +101,7 @@
   });
 })();
 
+// Функция отрисовки карты
 
 (function () {
   window.initMap = function () {

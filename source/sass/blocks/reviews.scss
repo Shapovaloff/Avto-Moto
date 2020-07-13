@@ -17,8 +17,12 @@
 
 .reviews__description-item {
   padding-bottom: 20px;
-  margin-bottom: 23px;
+  margin-top: 23px;
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+
+  &:first-child {
+    margin-bottom: 0;
+  }
 }
 
 .reviews__name {
@@ -36,11 +40,17 @@
 }
 
 .reviews__item {
+  margin-top: 13px;
   padding-left: 20px;
   position: relative;
 
   &--comment {
     padding-left: 0;
+  }
+
+  &--disadvantages {
+    margin-top: 7px;
+    margin-bottom: 26px;
   }
 }
 
@@ -57,7 +67,6 @@
 
 .reviews__title {
   display: block;
-  margin-top: 13px;
   font-weight: 600;
   font-size: 15px;
   line-height: 20px;
@@ -76,7 +85,7 @@
 .reviews__block-rating {
   display: flex;
   margin-top: 20px;
-  margin-bottom: 23px;
+  margin-bottom: 25px;
 }
 
 .reviews__stars {
