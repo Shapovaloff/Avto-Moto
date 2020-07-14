@@ -35,6 +35,13 @@
   font-size: 14px;
   line-height: 19px;
   color: #000000;
+
+  &--phone:hover,
+  &--phone:focus,
+  &--email:hover,
+  &--email:focus {
+    color: $accent-color;
+  }
 }
 
 .contacts__data {
