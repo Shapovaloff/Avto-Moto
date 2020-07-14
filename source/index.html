@@ -192,7 +192,7 @@
                     <use xlink:href="#icon-plus"></use>
                   </svg>
                   <span class="reviews__title reviews__title--advantages">Достоинства</span>
-                  <p class="reviews__text">мощность, внешний вид</p>
+                  <p class="reviews__text reviews__text--advantages">мощность, внешний вид</p>
                 </li>
 
                 <li class="reviews__item">
@@ -200,12 +200,12 @@
                     <use xlink:href="#icon-minus"></use>
                   </svg>
                   <span class="reviews__title reviews__title--disadvantages">Недостатки</span>
-                  <p class="reviews__text">Слабые тормозные колодки (пришлось заменить)</p>
+                  <p class="reviews__text reviews__text--disadvantages">Слабые тормозные колодки (пришлось заменить)</p>
                 </li>
 
                 <li class="reviews__item reviews__item--comment">
                   <b class="reviews__title reviews__title--comment">Комментарий</b>
-                  <p class="reviews__text">Взяли по трейд-ин, на выгодных условиях у дилера. Стильная внешка и крут по
+                  <p class="reviews__text reviews__text--comment">Взяли по трейд-ин, на выгодных условиях у дилера. Стильная внешка и крут по
                     базовым характеристикам. Не думал, что пересяду на китайский автопром, но сейчас гоняю и понимаю,
                     что полностью доволен.</p>
                 </li>
@@ -337,7 +337,7 @@
     <div class="popup__container popup__container--hidden">
       <button class="popup__close" type="button" aria-label="Кнопка закрытия модально окна"></button>
       <h2 class="popup__title">Оставить отзыв</h2>
-      <form class="popup__form" action="https://echo.htmlacademy.ru" method="POST">
+      <form class="popup__form">
         <div class="popup__wrapper">
           <div class="popup__column">
             <span class="popup__required-input popup__required-hidden">Пожалуйста, заполните поле</span>
@@ -403,44 +403,8 @@
     </div>
   </section>
 
-
-  <template class="template">
-    <li class="reviews__description-item">
-      <b class="reviews__name">Имя автора</b>
-      <ul class="reviews__list">
-        <li class="reviews__item">
-          <svg class="reviews__plus" width="8" height="8">
-            <use xlink:href="#icon-plus"></use>
-          </svg>
-          <span class="reviews__title reviews__title--advantages">Достоинства</span>
-          <p class="reviews__text reviews__text--advantages">Описание достоинств</p>
-        </li>
-        <li class="reviews__item">
-          <svg class="reviews__minus" width="7" height="2">
-            <use xlink:href="#icon-minus"></use>
-          </svg>
-          <span class="reviews__title reviews__title--disadvantages">Недостатки</span>
-          <p class="reviews__text reviews__text--disadvantages">Описанисание недостатков</p>
-        </li>
-        <li class="reviews__item reviews__item--comment">
-          <b class="reviews__title reviews__title--comment">Комментарий</b>
-          <p class="reviews__text reviews__text--comment">Коментарий автора</p>
-        </li>
-      </ul>
-      <div class="reviews__block-rating">
-        <span class="reviews__stars">
-          <span class="reviews__stars-raiting"></span>
-        </span>
-        <p class="reviews__text-advises">Советует</p>
-      </div>
-      <span class="reviews__text-answer">1 минуту назад</span>
-      <button type="button" class="reviews__btn-answer">Ответить</button>
-    </li>
-  </template>
-
-
-  <script defer src="js/main.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDluwBfvy_M346vmyhvVLD62kK76nnVtss&callback=initMap"></script>
+  <script src="js/main.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDluwBfvy_M346vmyhvVLD62kK76nnVtss&callback=initMap"></script>
 
 </body>
 

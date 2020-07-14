@@ -5,8 +5,15 @@
   align-items: center;
   flex-wrap: wrap;
   margin: 0;
-  padding: 30px 7px;
+  padding: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
   list-style-type: none;
+}
+
+.user-list__item {
+  padding-left: 7px;
+  padding-right: 7px;
 }
 
 .user-list__link {
